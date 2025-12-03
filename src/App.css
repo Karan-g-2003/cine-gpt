@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #050505;
+  font-family: 'Inter', sans-serif; /* Clean, modern font */
+  overflow: hidden;
+}
+
+/* The Floating Animation */
+@keyframes float {
+  0% { transform: translateY(0px) translateX(0px); }
+  33% { transform: translateY(-20px) translateX(10px); }
+  66% { transform: translateY(10px) translateX(-10px); }
+  100% { transform: translateY(0px) translateX(0px); }
+}
+
+.floating-poster {
+  animation: float 15s ease-in-out infinite;
+  transition: all 0.5s ease;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #000;
+}
+::-webkit-scrollbar-thumb {
+  background: #1a1a1a;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #08DB89;
+}
+
+/* Neon Glow Utility */
+.neon-shadow {
+  box-shadow: 0 0 20px rgba(8, 219, 137, 0.15);
+}
+.neon-border {
+  border: 1px solid rgba(8, 219, 137, 0.3);
+}
